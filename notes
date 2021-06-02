@@ -1,0 +1,85 @@
+2/6/21
+=======
+Q: can we have multiple main methods ??
+=>function overload=>using same name for function but with  different arguments.
+=>signaturse =>name of main method is same but arguments are different 
+
+
+Data types
+
+=>primitives Data types
+    the data types that are defined by the langauge 
+    used only for storing the values/literals
+    specific amount of memory is assigned to these data types
+
+    Boolean=>(def=>false)
+        -boolean(1 byte /2 byte)
+        =>false,true=>jvm decides how much memory they require to store these values
+        => false=0, true=1  =>int =>4 short=>2 byte=>1
+        0, 1 are integers=>integer data type
+    numeric data type
+        Character data types (def "\u000")
+            char=> is used  to store characters( 2 bytes)
+            java does not use ascii format=> 0-255 8bits=>2^8
+            (hindi characters can not be recognized) numbers , alphabets, special characters
+
+            unicode => 2 bytes=> 2^16=>possible combinations =>different languages recognized 
+         
+         integral data types
+            integer(def literal in integers is of int type)
+                byte(1 byte)(def =0)
+                    8 bits=numbers=>sign +=0,-=1
+                    remaining=>7
+                    -2^7 to 2^7-1  => -128 to +127
+                short(2 bytes) (def =0)
+                int (4 bytes)(def =0)
+                long(8 bytes)(def =0)
+            floating point(literals by default double type)
+                float (4 bytes)(def =0.0)
+                double(8 bytes)(def=0.0)
+=>Reference data type
+    null is the deafult value for refeerences and cannot be assigned to primitive variables ever.
+    => whenever your primitives not capapble of handling the data then you use ref data types
+
+    what are Reference??
+    =>they store address (Hash code) of objects
+
+local variables => variables that are present inside any function or loops 
+=>they have to be initialized before use
+class variabes=> properties/ data members =>default value
+
+=>memory distribution in jvm(thread safe => only thread can access that resource at a time)
+    method area=>it keeps the definition of class
+    heap area=>it keeps objects
+    stack area=> it helps excution of program
+
+command line arguments => giving input to program through command propm==>ide not possible run button
+if you havent passeed any value to a reference=> null stored there
+
+input /output in java
+in out objects
+
+primitives in the form of an objects=>wrapper class
+
+int => Integer
+float=> Float 
+double => Double 
+short => Short 
+byte=> Byte
+boolean => Boolean 
+long => Long 
+char => Character 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
