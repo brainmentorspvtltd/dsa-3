@@ -1,0 +1,39 @@
+Q1:
+String s="adsflskdskjdklaaaklskdfksj"
+count =>a,z=0
+
+=for (n )
+O(n)
+
+
+Q2:
+String s="adsflskdskjdklaaaklskdfksj"
+a=>
+d=>
+s=>
+f=>
+l=>......
+
+=>naive approch
+=> sort=>duplicate=>nlog(n) +n=>nlogn==>>(n^3+n)=>n^3 =>1000000000 +1000=>1000001000 =>n   n=1000=>n=>number of in
+
+=>hashtable=>O(n)=>26 extra =>//array=>O(1)
+=>switch(case=>letter)//r>>a-q
+=>hashmapO(n)
+=>
+
+
+Q3:
+String s3="ThisIsProperCase";
+output=>"This" , "Is", "Proper","Case"
+=>regex=>split
+=>split=>regex
+
+=>traverse=>substring=>(small => capital=>case change not there a single word)
+
+String S4="ThisIsProperCaseANDthisSentenceHERE"
+string[]="This","Is","Proper","Case","AND","this","Sentence","HERE"
+
+
+
+
