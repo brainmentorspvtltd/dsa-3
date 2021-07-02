@@ -1,0 +1,118 @@
+160. Intersection of Two Linked Lists
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        
+        ListNode temp= headA;
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        temp.next=headA;
+        
+        ListNode fast=headB,slow=headB;
+        boolean flag=false;
+        while(fast!=null && fast.next!=null){
+           fast=fast.next.next;
+            slow=slow.next;
+            if(fast==slow){
+                flag=true;
+                break;
+            }
+            
+            
+        }
+        
+        slow=headB;
+        
+        if(flag==true){
+
+            while(fast!=slow){
+                fast=fast.next;
+                slow=slow.next;
+            }
+            temp.next=null;
+            return fast;
+        }
+        else{
+            temp.next=null;
+            return null;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//         int len1=0,len2=0;
+//         ListNode temp1=headA,temp2=headB;
+//         while(temp1!=null){
+//             len1++;
+//             temp1=temp1.next;
+//         }
+//         while(temp2!=null){
+//             len2++;
+//             temp2=temp2.next;
+//         }
+        
+//         if(len1>len2){
+//             int diff=len1-len2;
+            
+//             while(diff>0){
+//                 diff--;
+//                 headA=headA.next;
+//             }
+//         }
+//         else{
+//             int diff=len2-len1;
+//             while(diff>0){
+//                 diff--;
+//                 headB=headB.next;
+//             }
+//         }
+        
+        
+//         while(headA!=null && headB!=null){
+//              if(headA==headB){
+//                 return headA;
+//             }
+//             headA=headA.next;
+//             headB=headB.next;
+           
+//         }
+        
+//         return null;
+    }
+}
+
+
+
+
+
+
+
+
+
