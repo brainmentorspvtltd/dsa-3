@@ -1,0 +1,64 @@
+class Solution {
+    public int getVal(char a){
+        if(a==']'){
+            return 1;
+        }
+        else if(a=='['){
+            return 2;
+        }
+        else if(a<='z' && a>='a'){
+            return 2;
+        }
+        else{
+            return 3;
+        }
+    }
+    public int[] getNum(int i, String s){
+        String num="";
+        while(i<s.length() && getVal(s.charAt(i))==3){
+            num=num+s.charAt(i);
+            i++;
+        }
+        
+       return  new int []{Integer.parseInt(num),--i};
+    }
+    public String decodeString(String s) {
+         Stack<String> str=new Stack<String>();
+        Stack<Integer> num=new Stack<Integer>();
+        
+        for(int i=0;i<s.length();i++){
+            char a=s.charAt(i);
+            int val=getVal(a);
+            if(val==2){
+                str.push(a+"");
+            }
+           else if(val==3){
+                int arr[]=getNum(i,s);
+                int number=arr[0];
+                i=arr[1];
+                num.push(number);
+            }
+            else if(val==1){
+                int n=num.pop();
+                String temp="";
+                while(str.peek().charAt(0)!='['){
+                    temp=str.pop()+temp;
+                }
+                str.pop();
+                String temp2=temp;
+                while(n>1){
+                    temp2=temp+temp2;
+                    n--;
+                }
+                
+                str.push(temp2);
+            }
+        }
+        
+        String ans="";
+        while(str.empty()==false){
+            ans=str.pop()+ans;
+        }
+        return ans;
+    }
+}
